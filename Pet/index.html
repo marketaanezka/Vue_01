@@ -1,0 +1,37 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Vue.js</title>
+    <link rel="stylesheet" href="style.css" />
+    <script src="vue.js"></script>
+  </head>
+  <body>
+    <div id="app" class="container">
+      <div class="pet">
+        <p>
+          My pet's name is {{name}}, he is {{age}} years old. Which is {{age *
+          4}} in human years.
+        </p>
+        <img src="salem.jpg" alt="Salem the cat" />
+        <ul>
+          He likes to
+          <li v-for="activity in activities">
+            {{activity}}
+          </li>
+        </ul>
+        <p>{{purr()}}</p>
+        <p>He weighs {{weight}} kg.</p>
+        <div class="buttons">
+          <button v-on:click="feedAlittle">Feed Salem</button>
+          <button v-on:click="feedAlot">Stuff Salem</button>
+          <button v-on:click="walk">Walk Salem</button>
+          <button v-on:click="hiss">Enough!</button>
+        </div>
+        <p>Last action {{action}}</p>
+      </div>
+    </div>
+    <script src="index.js"></script>
+  </body>
+</html>
